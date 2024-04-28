@@ -19,7 +19,7 @@
   <meta name="google-site-verification" content="sdz4d86QkTWaWHiWkS9mtiln38Bu0wirf94l-z1MkhQ" />
 
 
-  <title>Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions</title>
+  <title>GaussianVTON: 3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-87HN038KJT"></script>
@@ -57,54 +57,56 @@
   <div class="section">
     <div class="container">
       <div class="title-row">
-        <h1 class="title">Instruct-NeRF2NeRF</h1>
-        <h1 class="subheader">Editing 3D Scenes with Instructions</h1>
-        <h1 class="subheader">ICCV 2023 (Oral)</h1>
+        <h1 class="title">GaussianVTON</h1>
+        <h1 class="subheader">3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting</h1>
+        <h1 class="subheader">Under Review</h1>
       </div>
       <div class="base-row author-row">
         <div class="base-col author-col">
-          <a href="https://www.ayaanzhaque.me/" target="_blank" class="author-text">
-            Ayaan Haque
-          </a>
+          <a href="https://haroldchen19.github.io/" target="_blank" class="author-text">
+            Haodong Chen
+          </a><sup>1</sup>
         </div>
         <div class="base-col author-col">
-          <a href="https://www.matthewtancik.com/" target="_blank" class="author-text">
-            Matthew Tancik
-          </a>
+          <a href="https://github.com/KyleHuang9" target="_blank" class="author-text">
+            Yongle Huang
+          </a><sup>1</sup>
         </div>
         <div class="base-col author-col">
-          <a href="https://people.eecs.berkeley.edu/~efros/" target="_blank" class="author-text">
-            Alexei A. Efros
-          </a>
+          <a href="https://github.com/JethroJames" target="_blank" class="author-text">
+            Haojian Huang
+          </a><sup>2</sup>
         </div>
         <div class="base-col author-col">
-          <a href="https://holynski.org/" target="_blank" class="author-text">
-            Aleksander Holynski
+          <a href="https://haroldchen19.github.io/" target="_blank" class="author-text">
+            Xiangsheng Ge
             <span class="superscript"></span>
-          </a>
+          </a><sup>1</sup>
         </div>
         <div class="base-col author-col">
-          <a href="https://people.eecs.berkeley.edu/~kanazawa/" target="_blank" class="author-text">
-            Angjoo Kanazawa
-          </a>
+          <a href="https://scholar.google.com/citations?hl=en&user=amxDSLoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="author-text">
+            Dian Shao
+          </a><sup>&dagger;</sup><sup>1</sup>
         </div>
       </div>
       <div>
-        <h1 id="uc-berkeley">UC Berkeley</h1>
+        <h1 id="uc-berkeley"><sup>&dagger;</sup>Corresponding Author</h1>
+        <h1 id="uc-berkeley"><sup>1</sup>Northwestern Polytechnical University</h1>
+        <h1 id="uc-berkeley"><sup>2</sup>The University of Hong Kong</h1>
       </div>
 
       <div class="link-labels base-row">
-        <div class="base-col icon-col"><a href="https://arxiv.org/abs/2303.12789" target="_blank" class="link-block"><img
+        <div class="base-col icon-col"><a href="https://haroldchen19.github.io/" target="_blank" class="link-block"><img
               src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
               alt="paper"
               sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px"
               srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w"
               class="icon-img" /></a></div>
-        <div class="base-col icon-col"><a href="https://github.com/ayaanzhaque/instruct-nerf2nerf" class="link-block"><img
+        <div class="base-col icon-col"><a href="https://haroldchen19.github.io/" class="link-block"><img
               src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png"
               alt="paper" class="icon-img github-img-icon" /></a></div>
         <div class="base-col icon-col"><a
-          href="https://drive.google.com/drive/folders/1v4MLNoSwxvSlWb26xvjxeoHpgjhi_s-s?usp=share_link"
+          href="https://haroldchen19.github.io/"
           target="_blank" class="link-block"><img
               src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e7136849ee3b0a0c6a95151_database.svg"
               alt="paper" class="icon-img data-img-icon" /></a></div>
@@ -114,7 +116,7 @@
           <strong class="link-labels-text">Paper</strong>
         </div>
         <div class="base-col icon-col">
-          <strong class="link-labels-text">&lt;/Code&gt;</strong>
+          <strong class="link-labels-text">Code</strong>
         </div>
         <div class="base-col icon-col">
           <strong class="link-labels-text">Data</strong>
@@ -123,28 +125,31 @@
 
       <h1 class="tldr">
         <b>TL;DR</b>:
-        Instruct-NeRF2NeRF enables instruction-based editing of NeRFs via a 2D diffusion model
+        GaussianVTON enables image prompting editing of 3D GSs via a 2D VTON model
       </h1>
       <video id="main-video" muted autoplay controls playsinline loop>
         <source id="mp4" src="data/videos/face.mp4" type="video/mp4">
       </video>
 
-      <h2 class="section-header">Overview</h2>
+      <h2 class="section-header">Abstract</h2>
       <div class="paragraph">
         <p>
-          We propose a method for editing NeRF scenes with text-instructions. Given a NeRF of a scene and the
-          collection
-          of images used to reconstruct it, our method uses an image-conditioned diffusion model (<a
-            href="https://www.timothybrooks.com/instruct-pix2pix">InstructPix2Pix</a>) to
-          iteratively edit the input images while optimizing the underlying scene, resulting in an optimized 3D
-          scene that
-          respects the edit instruction. We demonstrate that our proposed method is able to edit large-scale,
-          real-world
-          scenes, and is able to accomplish more realistic, targeted edits than prior work.
+          The increasing prominence of e-commerce has underscored the importance of Virtual Try-On (VTON).
+          However, previous studies predominantly focus on the 2D realm and rely heavily on extensive data for training.
+          Research on  3D VTON primarily centers on garment-body shape compatibility, a topic extensively covered in 2D VTON.
+          Thanks to advances in 3D scene editing, a 2D diffusion model has now been adapted for 3D editing via multi-viewpoint editing.
+          In this work, we propose GaussianVTON, an innovative 3D VTON pipeline integrating Gaussian Splatting (GS) editing with 2D VTON.
+          To facilitate a seamless transition from 2D to 3D VTON, we propose, for the first time,
+          the use of only images as editing prompts for 3D editing. To further address issues,
+          e.g., face blurring, garment inaccuracy, and degraded viewpoint quality during editing, we devise a three-stage refinement strategy to gradually mitigate potential issues.
+          Furthermore, we introduce a new editing strategy termed Edit Recall Reconstruction (ERR) to tackle the limitations of
+          previous editing strategies in leading to complex geometric changes.
+          Our comprehensive experiments demonstrate the superiority of GaussianVTON, offering a novel
+          perspective on 3D VTON while also establishing a novel starting point for image-prompting 3D scene editing.
         </p>
       </div>
 
-      <h2 class="section-header">How it works</h2>
+      <!-- <h2 class="section-header">How it works</h2>
       <div class="paragraph">
         <p>
           Our method gradually updates a reconstructed NeRF scene by iteratively updating the dataset images while
@@ -167,7 +172,7 @@
       <div class="paragraph" style="text-align: center">
         Example updates to the training dataset images over time. Notice that the edits are gradually becoming more
         consistent.
-      </div>
+      </div> -->
 
       <h2 class="section-header">Results</h2>
 
@@ -255,7 +260,7 @@
         </div>
       </div>
 
-      <video id="body-video" autobuffer muted autoplay webkit-playsinline playsinline loop>
+      <!-- <video id="body-video" autobuffer muted autoplay webkit-playsinline playsinline loop>
         <source id="mp4" src="data/videos/body_transform.mp4" type="video/mp4">
       </video>
 
@@ -267,7 +272,7 @@
       <h2 class="section-header">Training Progression</h2>
       <video id="body-video" muted autoplay playsinline controls loop>
         <source id="mp4" src="data/videos/evolve_comb.mp4" type="video/mp4">
-      </video>
+      </video> -->
 
       <!-- <div class="base-row add-top-padding">
         <img src="data/nerfstudio_logo.png" alt="Nerfstudio" style="height: 5em; margin-top:2em" />

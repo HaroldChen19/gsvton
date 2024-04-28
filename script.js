@@ -2,20 +2,20 @@
 var VIDEO_ASPECT_RATIO = 16.0 / 9.0;
 
 var farmTextStrings = [
-    "Original NeRF",
-    "<em>\"Make it autumn\"</em>",
-    "<em>\"Make it look like the Namibian desert\"</em>",
-    "<em>\"Make it midnight\"</em>",
-    "<em>\"Make it look like it just snowed\"</em>",
-    "<em>\"Make it stormy\"</em>",
-    "<em>\"Make it sunset\"</em>",
+    "Original GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
 ];
 
 var bearTextStrings = [
-  "Original NeRF",
-  "<em>\"Turn the bear into a grizzly bear\"</em>",
-  "<em>\"Turn the bear into a polar bear\"</em>",
-  "<em>\"Turn the bear into a panda\"</em>",
+  "Original GS",
+  "Edited GS",
+  "Edited GS",
+  "Edited GS",
 ];
 
 $("#farm-video").on('loadedmetadata', function() {
