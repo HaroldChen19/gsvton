@@ -11,6 +11,15 @@ var farmTextStrings = [
     "Edited GS",
 ];
 
+var lxlTextStrings = [
+    "Original GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+    "Edited GS",
+];
+
 var bearTextStrings = [
   "Original GS",
   "Edited GS",
@@ -27,12 +36,15 @@ $("#farm-video").on('loadedmetadata', function() {
 $(function() {
     current_farm_idx = 0;
     current_bear_idx = 0;
+    current_lxl_idx = 0;
 
     farmVideo = document.getElementById('farm-video');
     bearVideo = document.getElementById('bear-video');
+    lxlVideo = document.getElementById('lxl-video');
 
     farmText = document.getElementById('farm-text');
     bearText = document.getElementById('bear-text');
+    lxlText = document.getElementById('lxl-text');
 
     farmThumbnails = [
         document.getElementById('original'),
@@ -60,6 +72,19 @@ $(function() {
       }
       change_bear_index(current_bear_idx);
 
+        lxlThumbnails = [
+        document.getElementById('original'),
+        document.getElementById('autumn'),
+        document.getElementById('midnight'),
+        document.getElementById('snow'),
+        document.getElementById('storm'),
+        document.getElementById('sunset'),
+      ];
+      for (var i = 0; i < lxlThumbnails.length; i++) {
+        lxlThumbnails[i].addEventListener('click', change_lxl_index.bind(this, i));
+      }
+      change_farm_index(current_lxl_idx);
+
   });
   
 function change_farm_index (idx) {
@@ -82,4 +107,15 @@ function change_bear_index (idx) {
     bearText.innerHTML = bearTextStrings[idx];
     bearVideo.src = "data/videos/bear/bear-" + bearThumbnails[idx].id + ".mp4";
     bearVideo.load();
+}
+
+function change_bear_index (idx) {
+    lxlThumbnails[idx].classList.add("active-btn");
+    if (current_lxl_idx != idx) {
+        lxlThumbnails[current_lxl_idx].classList.remove("active-btn");
+    }
+    current_lxl_idx = idx;
+    lxlText.innerHTML = lxlTextStrings[idx];
+    lxlVideo.src = "data/videos/lxl/farm-" + lxlThumbnails[idx].id + ".mp4";
+    lxlVideo.load();
 }
