@@ -46,6 +46,19 @@ $(function() {
     bearText = document.getElementById('bear-text');
     lxlText = document.getElementById('lxl-text');
 
+    lxlThumbnails = [
+        document.getElementById('original'),
+        document.getElementById('autumn'),
+        document.getElementById('midnight'),
+        document.getElementById('snow'),
+        document.getElementById('storm'),
+        document.getElementById('sunset'),
+      ];
+      for (var i = 0; i < lxlThumbnails.length; i++) {
+        lxlThumbnails[i].addEventListener('click', change_lxl_index.bind(this, i));
+      }
+      change_farm_index(current_lxl_idx);
+
     farmThumbnails = [
         document.getElementById('original'),
         document.getElementById('autumn'),
@@ -71,19 +84,6 @@ $(function() {
         bearThumbnails[i].addEventListener('click', change_bear_index.bind(this, i));
       }
       change_bear_index(current_bear_idx);
-
-        lxlThumbnails = [
-        document.getElementById('original'),
-        document.getElementById('autumn'),
-        document.getElementById('midnight'),
-        document.getElementById('snow'),
-        document.getElementById('storm'),
-        document.getElementById('sunset'),
-      ];
-      for (var i = 0; i < lxlThumbnails.length; i++) {
-        lxlThumbnails[i].addEventListener('click', change_lxl_index.bind(this, i));
-      }
-      change_farm_index(current_lxl_idx);
 
   });
   
