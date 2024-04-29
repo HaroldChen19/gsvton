@@ -1,9 +1,8 @@
 
 var VIDEO_ASPECT_RATIO = 16.0 / 9.0;
 
-var farmTextStrings = [
+var lxlTextStrings = [
     "Original GS",
-    "Edited GS",
     "Edited GS",
     "Edited GS",
     "Edited GS",
@@ -11,8 +10,9 @@ var farmTextStrings = [
     "Edited GS",
 ];
 
-var lxlTextStrings = [
+var farmTextStrings = [
     "Original GS",
+    "Edited GS",
     "Edited GS",
     "Edited GS",
     "Edited GS",
@@ -34,17 +34,17 @@ $("#farm-video").on('loadedmetadata', function() {
   });
 
 $(function() {
+    current_lxl_idx = 0;
     current_farm_idx = 0;
     current_bear_idx = 0;
-    current_lxl_idx = 0;
 
+    lxlVideo = document.getElementById('lxl-video');
     farmVideo = document.getElementById('farm-video');
     bearVideo = document.getElementById('bear-video');
-    lxlVideo = document.getElementById('lxl-video');
 
+    lxlText = document.getElementById('lxl-text');
     farmText = document.getElementById('farm-text');
     bearText = document.getElementById('bear-text');
-    lxlText = document.getElementById('lxl-text');
 
     lxlThumbnails = [
         document.getElementById('original'),
@@ -109,7 +109,7 @@ function change_bear_index (idx) {
     bearVideo.load();
 }
 
-function change_bear_index (idx) {
+function change_lxl_index (idx) {
     lxlThumbnails[idx].classList.add("active-btn");
     if (current_lxl_idx != idx) {
         lxlThumbnails[current_lxl_idx].classList.remove("active-btn");
