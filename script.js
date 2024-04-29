@@ -116,6 +116,6 @@ function change_bear_index (idx) {
     }
     current_lxl_idx = idx;
     lxlText.innerHTML = lxlTextStrings[idx];
-    lxlVideo.src = "data/videos/lxl/farm-" + lxlThumbnails[idx].id + ".mp4";
+    lxlVideo.src = "data/videos/lxl/lxl-" + lxlThumbnails[idx].id + ".mp4";
     lxlVideo.load();
 }
