@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="Instruct-NeRF2NeRF enables editing of a NeRF scene with a simple text instruction."
+  <meta content="GaussianVTON enables image prompting editing of 3D GSs via a 2D VTON model."
     name="description" />
-  <meta content="Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions" property="og:title" />
-  <meta content="Instruct-NeRF2NeRF enables editing of a NeRF scene with a simple text instruction."
+  <meta content="GaussianVTON: 3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting" property="og:title" />
+  <meta content="GaussianVTON enables image prompting editing of 3D GSs via a 2D VTON model."
     property="og:description" />
   <meta content="https://instruct-nerf2nerf.github.io/data/open_graph.png" property="og:image" />
-  <meta content="Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions" property="twitter:title" />
-  <meta content="Instruct-NeRF2NeRF enables editing of a NeRF scene with a simple text instruction."
+  <meta content="GaussianVTON: 3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting" property="twitter:title" />
+  <meta content="GaussianVTON enables image prompting editing of 3D GSs via a 2D VTON model."
     property="twitter:description" />
   <meta content="https://instruct-nerf2nerf.github.io/data/open_graph.png" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -45,10 +45,27 @@
 
   <link href="style.css" rel="stylesheet" type="text/css" />
 
-  <link href="data/icons/wand_black.svg" rel="icon" media="(prefers-color-scheme: light)" />
-  <link href="data/icons/wand_white.svg" rel="icon" media="(prefers-color-scheme: dark)" />
+  <link href="static/personal.jpg" rel="icon" media="(prefers-color-scheme: light)" />
+  <link href="static/personal.jpg" rel="icon" media="(prefers-color-scheme: dark)" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .columns {
+        display: flex;
+        justify-content: space-between; 
+      }
+      .column {
+        flex: 1;
+        margin: 6px;
+      }
+      .interpolation-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
 </head>
 
 <body>
@@ -123,13 +140,13 @@
         </div>
       </div>
 
-      <h1 class="tldr">
+      <!-- <h1 class="tldr">
         <b>TL;DR</b>:
         GaussianVTON enables image prompting editing of 3D GSs via a 2D VTON model
       </h1>
       <video id="main-video" muted autoplay controls playsinline loop>
         <source id="mp4" src="data/videos/face.mp4" type="video/mp4">
-      </video>
+      </video> -->
 
       <h2 class="section-header">Abstract</h2>
       <div class="paragraph">
@@ -176,53 +193,7 @@
 
       <h2 class="section-header">Results</h2>
       
-<!--       <video id="lxl-video" muted autoplay webkit-playsinline playsinline loop>
-        <source id="lxl-video-src" src="data/videos/lxl/lxl-original.mp4" poster="/data/test.jpg" type="video/mp4">
-      </video>
-      <div class="video-text">
-        <span class="overlay-text" id="lxl-text">"Make it look like autumn"</span>
-      </div>
-      <div class="base-row lxl-thumbnail-row">
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="original">
-            <img src="data/icons/icons_reset-big.svg" alt="paper" class="thumbnails" />
-            Original
-          </button>
-        </div>
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="autumn">
-            <img src="data/icons/icons_autumn.svg" alt="paper" class="thumbnails" />
-            Autumn
-          </button>
-        </div>
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="midnight">
-            <img src="data/icons/icons_midnight.svg" alt="paper" class="thumbnails" />
-            Midnight
-          </button>
-        </div>
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="snow">
-            <img src="data/icons/icons_snow.svg" alt="paper" class="thumbnails" />
-            Snow
-          </button>
-        </div>
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="storm">
-            <img src="data/icons/icons_storm.svg" alt="paper" class="thumbnails" />
-            Storm
-          </button>
-        </div>
-        <div class="base-col lxl-thumbnail-col">
-          <button class="thumbnail-btn" id="sunset">
-            <img src="data/icons/icons_sunset.svg" alt="paper" class="thumbnails" />
-            Sunset
-          </button>
-        </div>
-      </div> -->
-
-      
-      <video id="farm-video" muted autoplay webkit-playsinline playsinline loop>
+      <!-- <video id="farm-video" muted autoplay webkit-playsinline playsinline loop>
         <source id="farm-video-src" src="data/videos/farm/farm-original.mp4" poster="/data/test.jpg" type="video/mp4">
       </video>
       <div class="video-text">
@@ -263,7 +234,7 @@
           <button class="thumbnail-btn" id="storm">
             <img src="data/icons/icons_storm.svg" alt="paper" class="thumbnails" />
             Storm
-          </button>
+          </button> 
         </div>
         <div class="base-col farm-thumbnail-col">
           <button class="thumbnail-btn" id="sunset">
@@ -271,9 +242,106 @@
             Sunset
           </button>
         </div>
+      </div> -->
+
+      <video id="man-video" muted autoplay webkit-playsinline playsinline loop>
+        <source id="man-video-src" src="data/videos/man/man-original-man.mp4" poster="/data/test.jpg" type="video/mp4">
+      </video>
+      <div class="video-text">
+        <span class="overlay-text" id="man-text">"Make it look like autumn"</span>
+      </div>
+      <div class="base-row man-thumbnail-row">
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="original-man">
+            <img src="data/icons/icons_reset-small.svg" alt="paper" class="thumbnails" />
+            Original
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="blue-low">
+            <img src="data/icons1/020328_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="dark-green-up">
+            <img src="data/icons1/000222.png" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="red-low">
+            <img src="data/icons1/051619_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="short-gray-up">
+            <img src="data/icons1/000333.png" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="short-green-up">
+            <img src="data/icons1/000288_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col man-thumbnail-col">
+          <button class="thumbnail-btn" id="sleeveless">
+            <img src="data/icons1/000444.png" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+      </div>      
+
+
+      <video id="lxl-video" muted autoplay webkit-playsinline playsinline loop>
+        <source id="lxl-video-src" src="data/videos/lxl/lxl-original-lxl.mp4" poster="/data/test.jpg" type="video/mp4">
+      </video>
+      <div class="video-text">
+        <span class="overlay-text" id="lxl-text">"Make it look like autumn"</span>
+      </div>
+      <div class="lxl-thumbnail-row">
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="original-lxl">
+            <img src="data/icons/icons_reset-big.svg" alt="paper" class="thumbnails" />
+            Original
+          </button>
+        </div>
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="short-blk-up">
+            <img src="data/icons1/000643_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="short-blue-low">
+            <img src="data/icons1/014743_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="blue-up">
+            <img src="data/icons1/000003_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="blue-low-lxl">
+            <img src="data/icons1/000111.png" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
+        <div class="base-col lxl-thumbnail-col">
+          <button class="thumbnail-btn" id="black-up">
+            <img src="data/icons1/5_1.jpg" alt="paper" class="thumbnails" />
+             
+          </button>
+        </div>
       </div>
 
-      <video id="bear-video" autobuffer muted autoplay webkit-playsinline playsinline loop>
+      <!-- <video id="bear-video" autobuffer muted autoplay webkit-playsinline playsinline loop>
         <source id="bear-video-src" src="data/videos/bear/bear-original.mp4" type="video/mp4">
       </video>
       <div class="video-text">
@@ -303,8 +371,8 @@
             <img src="data/icons/icons_polar.svg" alt="paper" class="thumbnails" />
             Polar Bear
           </button>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
       <!-- <video id="body-video" autobuffer muted autoplay webkit-playsinline playsinline loop>
         <source id="mp4" src="data/videos/body_transform.mp4" type="video/mp4">
@@ -327,7 +395,225 @@
         </h1>
       </div> -->
 
-      <div class="citation add-top-padding">
+      <h2 class="section-header">Click Image to View Gaussians</h2>
+      
+          <div class="columns is-centered has-text-centered">
+            <div class="column">
+              <div class="columns is-centered has-text-centered">
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/person.splat" target="_blank" >
+      
+                  <img src="static/images1/frame_00001.png"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_red_low.splat" target="_blank">
+      
+                  <img src="static/images1/man_red_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_sleeveless.splat" target="_blank">
+      
+                  <img src="static/images1/man_sleeveless.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_short_red_up.splat" target="_blank">
+      
+                  <img src="static/images1/man_short_red_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_short_green_up.splat" target="_blank">
+      
+                  <img src="static/images1/man_short_green_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_short_gray_up.splat" target="_blank">
+      
+                  <img src="static/images1/man_short_gray_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+      
+              </div>
+      
+
+              <div class="columns is-centered has-text-centered">
+
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_orange_up.splat" target="_blank">
+
+                  <img src="static/images1/man_orange_up.jpg"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."/>
+                  </a>
+                  </div>
+                      <div class="column content">
+                                    <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_long_white_up.splat" target="_blank">
+
+                  <img src="static/images1/man_long_white_up.jpg"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."/>
+                  </a>
+
+                  </div>
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_long_gray_up.splat" target="_blank">
+      
+                  <img src="static/images1/man_long_gray_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_gray_low.splat" target="_blank">
+      
+                  <img src="static/images1/man_gray_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_drakgreen_up.splat" target="_blank">
+      
+                  <img src="static/images1/man_darkgreen_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_darkblue_low.splat" target="_blank">
+      
+                  <img src="static/images1/man_darkblue_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+      
+              </div>
+
+              <!-- <div class="columns is-centered has-text-centered">
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_brown_low.splat" target="_blank">
+      
+                  <img src="static/images1/man_brown_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/man_blue_low.splat" target="_blank">
+      
+                  <img src="static/images1/man_blue_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+      
+              </div> -->
+      
+      
+      
+      
+                      <div class="columns is-centered has-text-centered">
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl.splat" target="_blank">
+      
+                  <img src="static/images1/frame_20.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl_black_up.splat" target="_blank">
+      
+                  <img src="static/images1/0104_0.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl_blue_low.splat" target="_blank">
+      
+                  <img src="static/images1/lxl_blue_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl_blue_up.splat" target="_blank">
+      
+                  <img src="static/images1/lxl_blue_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+
+                <div class="column content">
+                  <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl_short_blk_up.splat" target="_blank">
+      
+                  <img src="static/images1/lxl_short_blk_up.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+                  <p>
+                  </p>
+                </div>
+                          <div class="column content">
+                                        <a href="https://antimatter15.com/splat/?url=https://haroldchen19.github.io/gsvton-files/lxl_short_blue_low.splat" target="_blank">
+      
+                  <img src="static/images1/lxl_short_blue_low.jpg"
+                       class="interpolation-image"
+                       alt="Interpolate start reference image."/>
+                  </a>
+      
+                </div>
+      
+              </div>
+    
+      
+              </div>
+            </div>
+            </div>
+      
+      </section>
+      
+
+
+
+      <!-- <div class="citation add-top-padding">
         <h1 id="abstract"> Citation </h1>
         <p> If you use this work or find it helpful, please consider citing: (bibtex) </p>
         <pre id="codecell0">@inproceedings{instructnerf2023,
@@ -336,7 +622,7 @@
         &nbsp;booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
         &nbsp;year = {2023},
         } </pre>
-      </div>
+      </div> -->
 
       <h2 class="section-header">Acknowledgments</h2>
       <div class="paragraph">
